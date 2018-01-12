@@ -8,10 +8,10 @@ class Ants
         @board = Board.new   
 	end	
     
-    def dodaj_mrowki(wysokosc,szerokosc, plansza, mrowki)
+    def dodaj_mrowki(szerokosc, plansza, mrowki)
         
         for i in 1..mrowki
-            plansza[rand(0..wysokosc-1)][rand(0..szerokosc-1)] = "m"
+            plansza[rand(0..plansza.length - 1)][rand(0..szerokosc - 1)] = "m"
         end     
         
         @board.rysuj_plansza(szerokosc, plansza)
