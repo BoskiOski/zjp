@@ -2,6 +2,7 @@
 require_relative 'board'
 require_relative 'ants'
 
+#Main class responsible for reading data from console, and calling methods contained in another classes.
 class AntHill
 
 	def initialize

@@ -1,16 +1,17 @@
 #!/usr/bin/env ruby
 require_relative 'board'
 
+#Class responsible for initializing ants, forcing them to move.
 class Ants
     
     def initialize
         @board = Board.new   
 	end	
     
-    def dodaj_mrowki(wyskosc,szerokosc, plansza, mrowki)
+    def dodaj_mrowki(wysokosc,szerokosc, plansza, mrowki)
         
         for i in 1..mrowki
-            plansza[rand(0..wysokosc)][rand(0..szerokosc)] = "m"
+            plansza[rand(0..wysokosc-1)][rand(0..szerokosc-1)] = "m"
         end     
         
         @board.rysuj_plansza(szerokosc, plansza)
@@ -28,10 +29,10 @@ class Ants
                     plansza[i][j] = " "
                     ii = rand(i-1..i+1)
                     jj = rand(j-1..j+1)
-                        if plansza [ii][jj] == "m" then
-                            next
-                        end
                         if ii.between?(0, wysokosc-1) && jj.between?(0, szerokosc-1) then
+                            if plansza [ii][jj] == "m" then
+                                next
+                            end
                             plansza[ii][jj] = "m"
                         end  
                 end

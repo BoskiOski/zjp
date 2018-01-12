@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+#Class responsible for creating and printing board.
 class Board
 	
     def wypelnij_plansze(wysokosc, szerokosc)
