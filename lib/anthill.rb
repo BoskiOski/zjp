@@ -14,9 +14,10 @@ class AntHill
 	end	
     
     def start
+      wymiary = [@wysokosc, @szerokosc]
       plansza = @board.wypelnij_plansze(@wysokosc, @szerokosc)
-      plansza = @ants.dodaj_mrowki(@szerokosc, plansza, @mrowki)
-      
+      plansza = @ants.dodaj_mrowki(wymiary, plansza, @mrowki)
+      @board.rysuj_plansza(@szerokosc, plansza) 
       while true do    
       plansza = @ants.mrowki_sie_poruszaja(@wysokosc, @szerokosc, plansza)    
       end    

@@ -8,17 +8,19 @@ class Ants
         @board = Board.new   
 	end	
     
-    def dodaj_mrowki(szerokosc, plansza, mrowki)
-        
+    def dodaj_mrowki(wymiary, plansza, mrowki)
         for i in 1..mrowki
-            plansza[rand(0..plansza.length - 1)][rand(0..szerokosc - 1)] = "m"
-        end     
-        
-        @board.rysuj_plansza(szerokosc, plansza)
-        
+            while true do
+                val1 = rand(0..wymiary[0] - 1)
+                val2 = rand(0..wymiary[1] - 1)
+                if(plansza[val1][val2] != "m") then
+                    plansza[val1][val2] = "m"
+                    break
+                end 
+            end
+        end
         return plansza
     end
-    
     
     def mrowki_sie_poruszaja(wysokosc, szerokosc, plansza)
         sleep(2)
