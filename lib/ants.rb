@@ -3,12 +3,12 @@ require_relative 'board'
 
 #Class responsible for initializing ants, forcing them to move.
 class Ants
-    
+ 
     def initialize
         @board = Board.new   
 	end	
     
-    def dodaj_mrowki(wymiary, plansza, mrowki)
+  def dodaj_mrowki(wymiary, plansza, mrowki)
         for i in 1..mrowki
             while true do
                 val1 = rand(0..wymiary[0] - 1)
@@ -20,27 +20,52 @@ class Ants
             end
         end
         return plansza
+end
+  
+      
+      
+      
+     def rusz_mrowke(tab, plansza, wymiary)
+         i = tab[0]
+         j = tab[1]
+        tabela_randomow = [rand(i-1..i+1), rand(j-1..j+1)]
+      ii = tabela_randomow[0]
+        # jj = rand(j-1..j+1)
+            if ii.between?(0, wymiary[0]-1) && tabela_randomow[1].between?(0, wymiary[1]-1) && plansza [ii][tabela_randomow[1]] != "m"
+                 
+                postaw_mrowke(tabela_randomow, plansza, tab)                           
+            end
+         
+     end
+      
+      def postaw_mrowke(tabela_randomow, plansza,tab)
+       
+    plansza[tab[0]][tab[1]] = " "
+    plansza[tabela_randomow[0]][tabela_randomow[1]] = "m"  
+          
+      end
+    
+    def czysc      
+         sleep(2)
+        system "clear"
+        
     end
     
-    def mrowki_sie_poruszaja(wysokosc, szerokosc, plansza)
-        sleep(2)
-        system "clear"
-        for i in 0..wysokosc-1
-            for j in 0..szerokosc-1
-                if plansza[i][j] == "m" then
-                    plansza[i][j] = " "
-                    ii = rand(i-1..i+1)
-                    jj = rand(j-1..j+1)
-                        if ii.between?(0, wysokosc-1) && jj.between?(0, szerokosc-1) then
-                            if plansza [ii][jj] == "m" then
-                                next
-                            end
-                            plansza[ii][jj] = "m"
-                        end  
-                end
+    def mrowki_sie_poruszaja(wymiary, plansza)
+       czysc
+        for i in 0..wymiary[0]-1
+            for j in 0..wymiary[1]-1
+                 tab=[i,j]
+                if plansza[i][j] == "m" then                   
+                    rusz_mrowke(tab, plansza, wymiary)                    
+                else next
+                    
+                end               
             end
         end    
-        @board.rysuj_plansza(szerokosc, plansza)          
+           
         return plansza
     end
+                
+    private :postaw_mrowke, :rusz_mrowke  
 end
