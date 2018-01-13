@@ -20,7 +20,6 @@ describe Ants do
             for j in 0..szerokosc-1
                 if plansza[i][j] == "m" then
                     licznik += 1
-                    puts licznik
                 end
             end
         end    

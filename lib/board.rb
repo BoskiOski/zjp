@@ -21,13 +21,17 @@ class Board
         puts ramka
     end
     
-    def rysuj_plansza(szerokosc, plansza)       
-        rysuj_ramka(szerokosc)
+    def rysuj_plansza(wymiary, plansza)       
+        rysuj_ramka(wymiary[1])
         
-        plansza.each do |r|
-			puts "|" + r.each { |p| p }.join("") + "|"
-		end 
+   	    for i in (0..wymiary[0]-1)
+			print "|"
+			for j in (0..wymiary[1]-1)
+				print plansza[i][j]
+			end
+			print "|\n"
+		end
         
-        rysuj_ramka(szerokosc)
+        rysuj_ramka(wymiary[1])
     end
 end

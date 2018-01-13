@@ -30,7 +30,6 @@ end
          j = tab[1]
         tabela_randomow = [rand(i-1..i+1), rand(j-1..j+1)]
       ii = tabela_randomow[0]
-        # jj = rand(j-1..j+1)
             if ii.between?(0, wymiary[0]-1) && tabela_randomow[1].between?(0, wymiary[1]-1) && plansza [ii][tabela_randomow[1]] != "m"
                  
                 postaw_mrowke(tabela_randomow, plansza, tab)                           
