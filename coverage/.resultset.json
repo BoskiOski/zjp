@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/ants_spec.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        50,
+        5000,
+        60,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/board_spec.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1515879604
+  }
+}

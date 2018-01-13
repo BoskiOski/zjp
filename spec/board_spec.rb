@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../lib/board'
 
-describe Ants do 
+describe Board do 
    context "When calling rysuj_plansza and given wymiary, plansza" do 
       
       it "should print board" do 
