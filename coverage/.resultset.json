@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/vvisnia/rubytomojulubionyjezykprogramowaniaxd/solid-wisnia-i-przyjaciele/spec/ants_spec.rb": [
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/ants_spec.rb": [
         null,
         1,
         1,
@@ -15,8 +15,8 @@
         1,
         1,
         1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -34,8 +34,8 @@
         1,
         1,
         1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -56,7 +56,7 @@
         null,
         null
       ],
-      "/home/vvisnia/rubytomojulubionyjezykprogramowaniaxd/solid-wisnia-i-przyjaciele/spec/board_spec.rb": [
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/board_spec.rb": [
         null,
         1,
         null,
@@ -66,8 +66,8 @@
         null,
         1,
         1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         2,
@@ -80,8 +80,8 @@
         null,
         1,
         1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -97,6 +97,6 @@
         null
       ]
     },
-    "timestamp": 1515907226
+    "timestamp": 1515907799
   }
 }

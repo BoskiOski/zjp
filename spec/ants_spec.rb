@@ -9,13 +9,11 @@ describe Ants do
   
      describe "When calling mrowki_sie_poruszaja" do
       it "ants moved" do
-         a = Ants.new
-         b = Board.new
-         wysokosc = 20
-         szerokosc = 40
-         wymiary = [20,40]
-         mrowki = 200
-          plansza = b.wypelnij_plansze(wysokosc, szerokosc)
+          a = Ants.new
+          b = Board.new
+          wymiary = [20,40]
+          mrowki = 200
+          plansza = b.wypelnij_plansze(wymiary)
           plansza = a.dodaj_mrowki(wymiary, plansza, mrowki)
           plansza_temp = Marshal.load(Marshal.dump(plansza))
           plansza = a.mrowki_sie_poruszaja(wymiary, plansza)        
@@ -30,15 +28,13 @@ describe Ants do
         a = Ants.new
          b = Board.new
          licznik = 0
-         wysokosc = 50
-         szerokosc = 100
          wymiary = [50,100]
          mrowki = 60
-         plansza = b.wypelnij_plansze(wysokosc, szerokosc)
+         plansza = b.wypelnij_plansze(wymiary)
          expect(a.dodaj_mrowki wymiary, plansza, mrowki).to be_a Array
          
-         for i in 0..wysokosc-1
-            for j in 0..szerokosc-1
+         for i in 0..wymiary[0]-1
+            for j in 0..wymiary[1]-1
                 if plansza[i][j] == "m" then
                     licznik += 1
                 end

@@ -7,14 +7,13 @@ class Board
         @plansza = Array.new()
     end
    
-    def wypelnij_plansze(wysokosc, szerokosc) 
-        for i in 0..wysokosc-1
+    def wypelnij_plansze(wymiary) 
+        for i in 0..wymiary[0]-1
             @plansza[i] = Array.new()
-            for j in 0..szerokosc-1
+            for j in 0..wymiary[1]-1
                 @plansza[i][j] = " "
             end
         end
-       
         return @plansza
     end
    

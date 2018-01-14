@@ -7,19 +7,15 @@ class AntHill
 
     
     
-	def initialize
-		@wysokosc = ARGV[0].to_i
-		@szerokosc = ARGV[1].to_i
-        @mrowki = ARGV[2].to_i 
+	def initialize 
         @board = Board.new
         @ants = Ants.new   
-        @wymiary = [@wysokosc, @szerokosc]
+        @wymiary = [ARGV[0].to_i, ARGV[1].to_i]
 	end	
     
     def start
-      
-      plansza = @board.wypelnij_plansze(@wysokosc, @szerokosc)
-      plansza = @ants.dodaj_mrowki(@wymiary, plansza, @mrowki)
+      plansza = @board.wypelnij_plansze(@wymiary)
+      plansza = @ants.dodaj_mrowki(@wymiary, plansza, ARGV[2].to_i)
       @board.rysuj_plansza(@wymiary, plansza) 
       while true do    
       plansza = @ants.mrowki_sie_poruszaja(@wymiary, plansza)    

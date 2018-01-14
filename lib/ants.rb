@@ -37,12 +37,12 @@ end
          
      end
       
-      def postaw_mrowke(tabela_randomow, plansza,tab)
+    def postaw_mrowke(tabela_randomow, plansza,tab)
        
-    plansza[tab[0]][tab[1]] = " "
-    plansza[tabela_randomow[0]][tabela_randomow[1]] = "m"  
+        plansza[tab[0]][tab[1]] = " "
+        plansza[tabela_randomow[0]][tabela_randomow[1]] = "m"  
           
-      end
+    end
     
     def czysc      
          sleep(2)
