@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/vvisnia/kurwamc/solid-wisnia-i-przyjaciele/spec/ants_spec.rb": [
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/ants_spec.rb": [
         null,
         1,
         1,
@@ -56,7 +56,7 @@
         null,
         null
       ],
-      "/home/vvisnia/kurwamc/solid-wisnia-i-przyjaciele/spec/board_spec.rb": [
+      "/home/mbreza/ruby/solid-wisnia-i-przyjaciele/spec/board_spec.rb": [
         null,
         1,
         null,
@@ -76,6 +76,6 @@
         null
       ]
     },
-    "timestamp": 1515894449
+    "timestamp": 1515895158
   }
 }

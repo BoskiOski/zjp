@@ -6,11 +6,11 @@ describe Board do
       
       it "should print board" do 
          b = Board.new
-         wysokosc = 50
-         szerokosc = 100
-         wymiary = [50,100]
+         wysokosc = 2
+         szerokosc = 2
+         wymiary = [2,2]
          plansza = b.wypelnij_plansze(wysokosc, szerokosc)
-         expect{b.rysuj_plansza wymiary, plansza}.to_not raise_error
+         expect{b.rysuj_plansza wymiary, plansza}.to output("----\n|  |\n|  |\n----\n").to_stdout
       end 
       
    end 
